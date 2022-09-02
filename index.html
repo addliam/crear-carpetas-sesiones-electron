@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Crea multiples carpetas para tus sesiones</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+    </style>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+  <body>
+    <header>
+        <h4 id="project_name">UCV TOOLS</h4>
+        <h1 id="app_title">CARPETAS PARA SESIONES</h1>
+        <p id="description">Crea multiples carpetas con tus sesiones para cada curso de manera rapida.</p>    
+    </header>
+    <div class="app">
+        <div class="row spaceditem">
+            <p class="row__label">Numero de sesiones:</p>
+            <input id="numero_sesiones" type="text">
+        </div>
+        <div class="row">
+            <p class="row__label">Nombre del curso:</p>
+        </div>
+        <div class="row jcc spaceditem">
+            <input id="nombre_curso" type="text" placeholder="Escribe el nombre del curso">
+        </div>
+        <div class="row">
+            <p class="row__label">Ubicacion de la carpeta raiz:</p>
+        </div>
+        <div class="row spaceditem">
+            <span class="root_folder">C:\Users\HP\Desktop\www\UCV</span>
+            <button id="select_root">...</button>
+        </div>
+        <div class="row">
+            <p class="row__label">Tus carpetas tendran el estilo:</p>
+        </div>
+        <div class="row spaceditem">
+            <span id="modelo_carpetas">Sesion1, Sesion2, Sesion3 ...</span>
+        </div>
+        <div class="row jcc">
+            <button id="crear_carpetas">CREAR CARPETAS</button>
+        </div>
+        <span class="message">Mensaje personalizado sobre algun error o prueba con exito.</span>
+        <p id="info">Informacion</p>
+    </div>
+  </body>
+  <script src="./renderer.js"></script>
+</html>
